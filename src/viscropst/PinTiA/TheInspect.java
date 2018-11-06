@@ -1,6 +1,6 @@
 package viscropst.PinTiA;
 
-public class theInspect {
+public class TheInspect {
     public static void main(String[] args) {
         // write your code here
         int N;
