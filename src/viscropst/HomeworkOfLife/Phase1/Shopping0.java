@@ -2,17 +2,17 @@ package viscropst.HomeworkOfLife.Phase1;
 
 
 public class Shopping0 {
-    private static String form = "%s %s\t%s %s\t%s %s\n";//"购买物品: xxx单价: 10    个数: 1    金额: ￥1111"格式
-    private static String form1 = "%s：%s";//“是幸运用户吗：true”格式
-    private static String form1_a = "%s：";//“录入的信息是：”格式
-    private static String form2 = "%s?%s\n";//“是幸运用户吗？true”格式
-    private static String form3 = "%s %s";//“T恤 ￥245.0”格式
-    private static String form4 = "%s\t%s\t%s";//“1.xxx 2.xxx"
-    private static String formPwErrMsg = "输入错误！您还有%d次机会！";
-    private static String formInInfo = "%s\t%s\t%s\n";//"xxxx     xxxx    xxxx"格式
-    private static String formInInfo1 = "%s %s %s\n";//"xxxx xxxx xxxx"格式
-    private static String seprateline = "\n" + "========================================" + "\n";//分割线
-    private static String seprateline1 = "****************************************";
+    public static String form1 = "%s：%s";//“是幸运用户吗：true”格式
+    public static String form1_a = "%s：";//“录入的信息是：”格式
+    public static String form2 = "%s?%s\n";//“是幸运用户吗？true”格式
+    public static String form3 = "%s %s";//“T恤 ￥245.0”格式
+    public static String form4 = "%s\t%s\t%s";//“1.xxx 2.xxx"
+    public static String formPwErrMsg = "输入错误！您还有%d次机会！";
+    public static String formInInfo = "%s\t%s\t%s\n";//"xxxx     xxxx    xxxx"格式
+    public static String formInInfo1 = "%s %s %s\n";//"xxxx xxxx xxxx"格式
+    public static String seprateline = "\n" + "========================================" + "\n";//分割线
+    public static String seprateline1 = "****************************************";
+    public String form = "%s %s\t%s %s\t%s %s\n";//"购买物品: xxx单价: 10    个数: 1    金额: ￥1111"格式
 
     public static void main(String[] args) {
         java.util.Scanner scanner;
