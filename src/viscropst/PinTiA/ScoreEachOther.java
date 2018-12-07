@@ -1,7 +1,7 @@
 package viscropst.PinTiA;
 
 public class ScoreEachOther {
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         java.util.Scanner in = new java.util.Scanner(System.in);
         int n = in.nextInt();
         int k = in.nextInt();
@@ -22,5 +22,48 @@ public class ScoreEachOther {
         for(int l =m;l>=1;l--)
             s+=String.format("%.3f",final_sc[final_sc.length-l])+" ";
         System.out.print(s.trim());
+    }*/
+    public static void main(String[] args) {
+        java.util.Scanner in = new java.util.Scanner(System.in);
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int m = in.nextInt();
+        float[] final_sc = new float[n];
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            int max = 0;
+            int min = 1000;
+            for (int j = 0; j < k; j++) {
+                int i0 = in.nextInt();
+                sum += i0;
+                if (max < i0) {
+                    max = i0;
+                }
+                if (min > i0) {
+                    min = i0;
+                }
+            }
+            float avg = sum - (max + min);
+            final_sc[i] = avg * 1.0f / (k - 2.0f);
+        }
+
+        sort(final_sc);
+        String s = "";
+        for (int l = m; l >= 1; l--)
+            s += String.format("%.3f", final_sc[final_sc.length - l]) + " ";
+        System.out.print(s.trim());
+
+    }
+
+    public static void sort(float[] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] > array[i]) {
+                    float tmp = array[i];
+                    array[i] = array[j];
+                    array[j] = tmp;
+                }
+            }
+        }
     }
 }
