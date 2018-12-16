@@ -5,7 +5,7 @@ package viscropst.OnZJFFClass.Phase1.cheapter2;
 
 /**
  * @author viscropst
- * ƻ���ʼǱ����г��ݶ�
+ * 苹果笔记本的市场份额
  *	
  */
 public class Apple {

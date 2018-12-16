@@ -5,9 +5,9 @@ public class practice {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 //		int days=46;
-//		System.out.println("����Ϊ��"+(days/7)+"��ʣ��������"+(days%7));
+//		System.out.println("周数为："+(days/7)+"，剩余天数："+(days%7));
 //		double radius=1.5;
-//		System.out.format("Բ�����Ϊ: %f", (Math.PI*Math.pow(radius, 2)));
+//		System.out.format("圆的面积为: %f", (Math.PI*Math.pow(radius, 2)));
 		java.util.Scanner scanner = new java.util.Scanner(System.in);
 //	    int height=scanner.nextInt();
 //	    float wei=(float) (((height-100)*0.9)*2);

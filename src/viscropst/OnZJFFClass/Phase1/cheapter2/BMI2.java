@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author TEDU
  * @version 2.0
- * ����ͨ����ȡ�û�������ȡ��BMI
+ * 可以通过获取用户输入来取得BMI
  */
 public class BMI2 {
 
@@ -19,7 +19,7 @@ public class BMI2 {
 		char sex = info_in[2].charAt(0);
 		double bmi=weight/(Math.pow(height, 2));
 		DecimalFormat df= new DecimalFormat("0.00");
-		System.out.println("���BMIָ���ǣ�"+df.format(bmi));
+		System.out.println("你的BMI指数是：" + df.format(bmi));
 		scanner.close();
 	}
 

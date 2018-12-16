@@ -6,7 +6,7 @@ public class Score2 {
 		// TODO Auto-generated method stub
 		int zhangsan=90;
 		int lisi=80;
-		System.out.println("�����ĳɼ��Ƿ�����ĸ���"+(zhangsan>lisi));
+		System.out.println("张三的成绩是否比李四高吗：" + (zhangsan > lisi));
 	}
 
 }

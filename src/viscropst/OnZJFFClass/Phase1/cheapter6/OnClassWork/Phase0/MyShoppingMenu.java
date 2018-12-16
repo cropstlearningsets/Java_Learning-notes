@@ -1,49 +1,24 @@
-package viscropst.OnZJFFClass.OnClassWork;
+package OnClassWork.Phase0;
 
 import java.util.Scanner;
 
 
 public class MyShoppingMenu {
     String stars = "**********************************";
+
     public void showLoginMenu() {
         System.out.println("\n\t欢迎使用我行我素购物管理系统");
-        String message = showSelection(new String[]{"登录菜单", "退出"});
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            int choice = scanner.nextInt();
-            if (choice == 1) {
-                System.out.print("请输入用户名：");
-                String tmp0 = scanner.next();
-                System.out.print("请输入密码：");
-                String tmp1 = scanner.next();
-                if ("admin".equals(tmp0) && "111111".equals(tmp1)) {
-                    System.out.println("@@登录成功" + tmp0 + "@@");
-                    showMainMenu();
-                } else {
-                    System.out.println("@@您没有权限进入,请重新登录@@");
-                }
-                break;
-            } else if (choice == 2) {
-                System.out.println("谢谢你的使用");
-                break;
-            } else {
-                System.out.println("你的输入有错误，请重新输入");
-            }
-            System.out.print(message);
-        }
-        scanner.close();
+        showSelection(new String[]{"登录菜单", "退出"});
     }
 
-    private String showSelection(String[] sels) {
+    private void showSelection(String[] sels) {
         for (int i = 0; i < sels.length; i++) {
             System.out.println(
                     String.format("\n\t\t%d.%s", (i + 1), sels[i]));
         }
         System.out.println(stars);
-        String message = "请选择,输入数字:";
-        System.out.print(message);
+        System.out.print("请选择,输入数字:");
         //getInputAndJudge(new java.util.Scanner(System.in).nextInt());
-        return message;
     }
 
     private void showSelection(String[] sels, String message) {
@@ -56,13 +31,16 @@ public class MyShoppingMenu {
         //getInputAndJudge(new java.util.Scanner(System.in).nextInt());
     }
 
+    private void getInputAndJudge(int nextInt) {
+        // TODO Auto-generated method stub
+
+    }
+
     public void showMainMenu() {
         System.out.println("\n\t我行我素购物管理系统主菜单");
-        String message = showSelection(new String[]{"客户管理", "真情回馈", "注销"});
-        //System.out.print("请选择,输入数字:");
-        Scanner scanner = new Scanner(System.in);
+        showSelection(new String[]{"客户管理", "真情回馈", "注销"});
         while (true) {
-
+            Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             if (choice == 1) {
                 showCustMenu();
@@ -76,7 +54,8 @@ public class MyShoppingMenu {
             } else {
                 System.out.println("你的输入有错误，请重新输入");
             }
-            System.out.print(message);
+            scanner.close();
+            System.out.print("请选择,输入数字:");
         }
     }
 
@@ -86,8 +65,8 @@ public class MyShoppingMenu {
         showSelection(new String[]{"显示所有客户信息",
                         "添加客户信息", "修改客户信息", "查看客户信息"}
                 , message);
-        Scanner scanner = new Scanner(System.in);
         while (true) {
+            Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
             if (choice == 1) {
                 System.out.println("这是所有客户的信息");
@@ -99,13 +78,11 @@ public class MyShoppingMenu {
                 System.out.println("查看客户信息");
             } else if (choice == 0) {
                 showMainMenu();
-                break;
             } else {
                 System.out.println("你的输入有错误，请重新输入");
             }
             System.out.print(message);
         }
-        scanner.close();
     }
 
     public void showSendGMenu() {
@@ -123,13 +100,12 @@ public class MyShoppingMenu {
                 System.out.println("幸运抽奖");
             } else if (choice == 0) {
                 showMainMenu();
-                break;
             } else {
                 System.out.println("你的输入有错误，请重新输入");
             }
             System.out.print(message);
         }
-        scanner.close();
+
     }
 }
 
@@ -137,5 +113,29 @@ class StartMessage {
     public static void main(String[] args) {
         MyShoppingMenu menu = new MyShoppingMenu();
         menu.showLoginMenu();
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            int choice = scanner.nextInt();
+            if (choice == 1) {
+                System.out.print("请输入用户名：");
+                String tmp0 = scanner.next();
+                System.out.print("请输入密码：");
+                String tmp1 = scanner.next();
+                if ("admin".equals(tmp0) && "111111".equals(tmp1)) {
+                    System.out.println("@@登录成功" + tmp0 + "@@");
+                    menu.showMainMenu();
+                } else {
+                    System.out.println("@@您没有权限进入,请重新登录@@");
+                }
+                break;
+            } else if (choice == 2) {
+                System.out.println("谢谢你的使用");
+                break;
+            } else {
+                System.out.println("你的输入有错误，请重新输入");
+            }
+            scanner.close();
+        }
+
     }
 }
